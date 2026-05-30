@@ -1,15 +1,21 @@
+'use client'
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import React from 'react';
 
 const NavbarPage = () => {
-    const links = <>
-    <li><Link href={`/about`}>About</Link></li>
-    <li><Link href={`/blog`}>Blog</Link></li>
-    <li><Link href={`/contact`}>Contact </Link></li>
+    const pathName = usePathname();
 
-    
-    
+    const links = <>
+        <li><Link className={pathName === '/'? 'text-red-800': ''} href='/'>Home </Link></li>
+        <li><Link className={pathName === '/about'? 'text-red-800': ''} href='/about'>About</Link></li>
+        <li><Link className={pathName === '/blog'? 'text-red-800': ''}  href={`/blog`}>Blog</Link></li>
+        <li><Link className={pathName === '/contact'? 'text-red-800': ''}  href={`/contact`}>Contact </Link></li>
+
+
+
+
     </>
     return (
         <div>
@@ -22,16 +28,16 @@ const NavbarPage = () => {
                         <ul
                             tabIndex="-1"
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                                {links}
-     
+                            {links}
+
                         </ul>
                     </div>
-                    <a className=""><Image  width='120' height='80' src='/logo2.image.png' alt="logo pic"></Image></a>
+                    <Link href={'/'}><Image width='120' height='80' src='/logo2.image.png' alt="logo pic"></Image></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
                         {links}
-          
+
                     </ul>
                 </div>
                 <div className="navbar-end">
