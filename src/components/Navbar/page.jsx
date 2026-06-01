@@ -13,9 +13,6 @@ const NavbarPage = () => {
         <li><Link className={pathName === '/blog'? 'text-red-800': ''}  href={`/blog`}>Blog</Link></li>
         <li><Link className={pathName === '/contact'? 'text-red-800': ''}  href={`/contact`}>Contact </Link></li>
 
-
-
-
     </>
     return (
         <div>
@@ -32,7 +29,7 @@ const NavbarPage = () => {
 
                         </ul>
                     </div>
-                    <Link href={'/'}><Image width='120' height='80' src='/logo2.image.png' alt="logo pic"></Image></Link>
+                    <Link href={'/'}><Image width='120' height='80' src='/logo2.image.png' alt="logo pic" className="light:invert"></Image></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -40,9 +37,7 @@ const NavbarPage = () => {
 
                     </ul>
                 </div>
-                <div className="navbar-end">
-                    <a className="btn">See Card</a>
-                </div>
+
             </div>
         </div>
     );
