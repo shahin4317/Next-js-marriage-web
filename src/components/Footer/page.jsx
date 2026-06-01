@@ -20,7 +20,7 @@ const FooterPage = () => {
                     <p>
                         <span>Made By</span> Shahin❤️
                         <br />
-                        Providing reliable tech since 2026
+                        Delivering reliable tech solutions since 2026
                     </p>
                 </aside>
                 <nav>

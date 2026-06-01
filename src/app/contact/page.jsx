@@ -7,11 +7,12 @@ import { MdOutgoingMail } from 'react-icons/md';
 
 const ContactPage = () => {
     return (
-        <div className='container mx-auto pt-4 mb-4'>
-            <div className="bg-red-800 text-black max-w-md mx-auto rounded-2xl p-6 shadow-xl">
+        <div className='pt-4 mb-4 bg-white '>
+            <div className="bg-red-800 text-black max-w-md mx-auto rounded-2xl p-6 shadow-xl mb-5 text-white">
                 <h2 className="text-2xl font-bold text-center mb-6">
                     যোগাযোগ করুন
                 </h2>
+                 <div className="divider ">🤍</div>
 
                 <div className="space-y-4 text-lg font-medium">
 
